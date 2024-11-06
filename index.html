@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        fieldset {
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <h1>커피메뉴</h1>
+    <fieldset>
+        <legend>개인정보</legend>
+       아이디 : <input type="text" name='id' required
+       placeholder="아이디"> <br>
+       비밀번호 : <input type="text" name="psw" required
+       placeholder="비밀번호"> <br>
+       성명 : <input type="text" name="name" required
+       placeholder="홍길동"> <br>
+       생년월일 : <input type="text" name="name" required
+       placeholder="ex) 19960830"> <br>
+       성별 : 남 <input type="radio" name="gender">
+              여 <input type="radio" name="gender">
+    </fieldset>
+    <fieldset>
+        <legend>고객조사</legend>
+        좋아하는 커피
+        <select>
+            <option>아메리카노</option>
+            <option>카페모카</option>
+            <option>아샷추</option>
+        </select> <br>
+        하루에 커피를 몇 잔 정도 마시나요?
+        <input type="number" Min="1" max="10" step="1"> <br>
+        커피를 어디에서 주로 마시나요?
+    </fieldset> <br>
+    고객의견 <br>
+    <textarea rows="7" cols="60"></textarea>
+    <br>
+    <input type="submit" value="전송"
+    onclick="alert('전송됨')">
+    <input type="reset" value="다시쓰기">
+</body>
+</html>

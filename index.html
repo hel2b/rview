@@ -13,8 +13,10 @@
     </style>
 </head>
 <body>
+    
     <h1>커피메뉴</h1>
     <fieldset>
+        <form method="post" action="">
         <legend>개인정보</legend>
        아이디 : <input type="text" name='id' required
        placeholder="아이디"> <br>
@@ -31,9 +33,12 @@
         <legend>고객조사</legend>
         좋아하는 커피
         <select>
+            <option>선택하세요</option>
             <option>아메리카노</option>
             <option>카페모카</option>
             <option>아샷추</option>
+            <option>에스프레소</option>
+            <option>아바라</option>
         </select> <br>
         하루에 커피를 몇 잔 정도 마시나요?
         <input type="number" Min="1" max="10" step="1"> <br>
@@ -45,5 +50,9 @@
     <input type="submit" value="전송"
     onclick="alert('전송됨')">
     <input type="reset" value="다시쓰기">
+    <a href='review1.html'>
+    <input type="button" value="다음">
+    </a>
+</form>
 </body>
 </html>

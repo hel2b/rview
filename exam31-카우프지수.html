@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background:red;
+        }
+        .orange{
+            background:orange;
+        }
+        .green{
+            background:green;
+        }
+        .gray{
+            background:gray;
+        }
+        .black{
+            background:black;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('#kbtn').click(function(){
+                var height=parseInt($('#kh').val()) / 100;
+                var weight=parseInt($('#kw').val());
+                var kaup=weight/(height*height);
+                var str='';
+
+                if(kaup>=30){
+                    str='고도비만.';
+                $('body').removeClass();
+                $('body').addClass('black');
+            }
+                else if(kaup>=25){
+                    str='비만';
+                    $('body').removeClass();
+                $('body').addClass('red');
+                }
+                else if(kaup>=23){
+                    str='과체중';
+                    $('body').removeClass();
+                $('body').addClass('orange');
+                }
+                else if(kaup>=18){
+                    str='정상';
+                    $('body').removeClass();
+                $('body').addClass('green');
+                }
+                else{
+                    str='저체중';
+                    $('body').removeClass();
+                $('body').addClass('gray');
+                }
+
+                $('#k-result span').text(kaup);
+                $('#k-health span').text(str);
+
+            });
+        });
+        
+    </script>
+</head>
+<body class>
+    <ul class="kaup">
+        <li><input type="number" placeholder="키(cm)입력" id="kh" autofocus required></li>
+        <li><input type="number" placeholder="몸무게(kg)입력" id="kw" required></li>
+        <li><button type=button id="kbtn">카우프 지수 계산</button></li>
+    </ul>
+    <div id="k-result">카우프 지수 :<span></span></div>
+    <div id="k-health">건강상태 :<span></span></div>
+</body>
+</html>
